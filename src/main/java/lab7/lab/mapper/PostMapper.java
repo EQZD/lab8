@@ -13,7 +13,7 @@ public interface PostMapper {
     PostDto toDto(Post post);
 
     @InheritInverseConfiguration
-    @Mapping(target = "author", ignore = true) // user подставим в сервисе
+    @Mapping(target = "author", ignore = true)
     Post toEntity(PostDto dto);
 
     List<PostDto> toDtoList(List<Post> posts);

@@ -15,8 +15,8 @@ public interface UserMapper {
     UserDto toDto(User user);
 
     @InheritInverseConfiguration
-    @Mapping(target = "posts", ignore = true) // заполним отдельно
-    @Mapping(target = "roles", ignore = true) // заполним отдельно
+    @Mapping(target = "posts", ignore = true)
+    @Mapping(target = "roles", ignore = true)
     User toEntity(UserDto dto);
 
     List<UserDto> toDtoList(List<User> users);
